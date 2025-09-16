@@ -1,0 +1,526 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+a:hover{ text-decoration: none}
+.navbar .navbar-nav .nav-link{ 
+	font-weight: 500;
+color: pink; margin: 0 15px}
+.navbar .navbar-nav .nav-link:hover
+{
+	color: #fff
+}
+
+.subtitle
+{
+	font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 4rem;
+	color: #ff66b2
+}
+.subtitle-light
+{
+	font-family: "Mea Culpa", cursive;
+  font-weight: 400;
+  font-style: normal;
+	font-size: 4rem;
+	color: #fff;
+}
+h5 {font-weight: 500; font-size: 32px}
+
+.nav-pills .nav-link { 
+	background:linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%); 
+	color:#fff; 
+	padding: 8px 12px;
+  margin-bottom: 10px; /* đều nhau */
+  border-radius: 8px;
+  transition: all 0.3s ease
+}
+.nav-pills .nav-link:hover {
+  background: #f3e5f5;
+  color: #8e24aa;
+  border-left: 4px solid #ba68c8;
+}
+.nav-pills .nav-link.active{ background: #f3e5f5;
+  color: #8e24aa;
+  border-left: 4px solid #ba68c8;}
+
+
+/*Icon hình trái tim có nhịp đập*/
+.navbar-brand .fa-heart {
+  color: #ba68c8;
+  animation: heartbeat 1s infinite;
+}
+@keyframes heartbeat {
+  0%,100% {transform: scale(1);}
+  50% {transform: scale(1.3);}
+}
+
+/*màu gradient navigation bar*/
+.gradient-nav {
+  background: linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%);
+}
+
+/* Hero section */
+.hero {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+.hero-intro {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2s infinite;
+}
+
+@keyframes wave {
+  0% {transform: rotate(0deg);}
+  20% {transform: rotate(20deg);}
+  40% {transform: rotate(-10deg);}
+  60% {transform: rotate(20deg);}
+  80% {transform: rotate(-5deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero-name {
+  color: #000;
+}
+
+.hero-role {
+  color: #ff66b2; /* màu hồng */
+}
+
+.hero-desc {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.hero-buttons .btn-primary {
+  background-color: linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%);
+  border: none;
+}
+
+.hero-buttons .btn-light {
+  border: 1px solid #ff66b2;
+}
+/* === Contact Me button === */
+.contact-btn {
+  /* nền gradient */
+  background: linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%);
+  border: none;
+  color: #fff; /* chữ trắng */
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #ff66b2; /* tím khi hover */
+  color: #fff;
+}
+
+/* === Download CV button === */
+.download-btn {
+  color: #ff66b2; /* Màu hồng */
+  border-color: #ff66b2; /* đường viền */
+}
+
+.download-btn:hover {
+  background-color: #ff66b2; /* màu tím */
+  color: #fff; /* chữ trắng khi hover */
+}
+
+.my-social-title {
+  font-size: 1.5rem; /* to hơn */
+  font-weight: 700;
+  background: linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* chữ gradient */
+  display: inline-block;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.my-social-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 3px;
+  background: linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%);
+  border-radius: 5px;
+}
+
+.my-social-title i {
+  margin-left: 8px;
+  font-size: 1rem;
+  color: #ff66b2; /* icon hồng dễ thương */
+}
+
+.social-icons {
+  margin-top: 10px; /* cách chữ "My Social" */
+  display: flex;
+  justify-content: flex-start; /* hoặc center nếu muốn căn giữa */
+}
+/* Đổi màu tất cả icon */
+.social-icons i {
+  color: #ff66b2; /* màu hồng */
+  transition: color 0.3s ease;
+}
+.social-icons i:hover {
+  color: #be7fff; /* màu tím */
+}
+.hero-col {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px; 
+}
+
+.hero-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  z-index: 0;
+  background: radial-gradient(circle,rgba(244, 148, 191, 1) 80%, rgba(190, 127, 255, 1) 20%);
+}
+
+.hero-circle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  border: 4px dashed #f29ddc;
+  z-index: 0; /* để cùng tầng với circle */
+}
+
+.hero-img {
+  position: relative; /* quan trọng */
+  z-index: 2; /* nằm trên shape */
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#about {
+  background: linear-gradient(135deg, #f8a9da, #b58df6); /* gradient nền */
+  padding: 80px 0;
+}
+
+#about h2, 
+#about h3, 
+#about h4 {
+  color: #fff; /* tiêu đề trắng */
+  font-weight: 700;
+}
+
+#about p {
+  color: rgba(255,255,255,0.9); /* chữ trắng nhẹ */
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-areas: 
+    "large small1"
+    "large small2";
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  height: 100%;
+}
+
+.about-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-item img:hover {
+  transform: scale(1.03);
+}
+
+/* Gán vị trí từng item */
+.about-item.large { grid-area: large; }
+.about-item.small1 { grid-area: small1; }
+.about-item.small2 { grid-area: small2; }
+
+/*tab kinh nghiệm*/
+/* khung ngoài */
+.experience-box {
+  border: 1px solid #d9b3f7;
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* shape năm */
+.timeline-year {
+  min-width: 120px;
+  padding: 8px 12px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  background: linear-gradient(90deg,rgba(244, 148, 191, 1) 0%, rgba(190, 127, 255, 1) 100%);
+  flex-shrink: 0;
+}
+
+/* nội dung */
+.timeline-content h6 {
+  color: #333;
+}
+
+.timeline-content p {
+  color: #555;
+	margin-bottom: 0;
+}
+
+/* ====== PROGRESS BARS ====== */
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  margin-bottom: 15px; /* đồng bộ spacing */
+}
+
+.progress-bar {
+  font-size: 12px;
+  line-height: 10px;
+  background: #ff66b2
+}
+
+
+/* Đảm bảo spacing 2 cột (col-md-4 + col-md-8) */
+.row.mt-5 > .col-md-4,
+.row.mt-5 > .col-md-8 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row.align-items-center {
+  display: flex;
+  align-items: center; /* canh giữa theo chiều dọc */
+}
+
+/* Section nền gradient */
+#services {
+  background: linear-gradient(90deg, #f7b1e3, #b894f6);
+  padding: 60px 0;
+}
+
+/* Tiêu đề */
+#services h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#services p.text-light {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+/* Card dịch vụ */
+#services .card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#services .card img {
+  transition: transform 0.4s ease;
+}
+
+/* Hover card – nâng và zoom ảnh */
+#services .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+#services .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Badge gradient */
+#services .badge {
+  background: linear-gradient(90deg, #f7b1e3, #b894f6);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Title dịch vụ */
+#services .card-body h5 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+#services .card:hover .card-body h5 {
+  color: #b36adf; /* đổi màu tiêu đề khi hover */
+}
+
+/* Mô tả */
+#services .card-body p.text-muted {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Giá */
+#services .card-body .font-weight-bold {
+  font-size: 1rem;
+  color: #b36adf;
+}
+
+#team {
+  background: #fff; /* nền trắng */
+  color: #333;
+}
+
+.team-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #b58df6; /* tím hồng */
+}
+
+.team-subtitle {
+  font-size: 1rem;
+  color: #666;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(181,141,246,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(181,141,246,0.3);
+}
+
+/* Khung ảnh tròn */
+.team-image {
+  width: 180px; /* to hơn */
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 6px solid transparent;
+  background: linear-gradient(45deg,#fba8d4,#b58df6);
+  padding: 5px; /* viền gradient */
+}
+
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ảnh đầy khung */
+  border-radius: 50%;
+}
+
+.team-card h5 {
+  font-weight: 700;
+  margin-top: 15px;
+  color: #ff66b2;
+}
+
+.team-card p {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0;
+}
+/* Contact-footer */
+#contact{
+  background: #f7f3fb url('pattern.svg') repeat;
+  color: #333;
+  padding: 60px 0;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #ff66b2;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.footer-divider {
+  border-color: #eee;
+}
+
+/* Form input */
+.contact-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  font-size: 0.95rem;
+  margin-bottom: 15px; box-shadow: 0 4px 20px rgba(212,146,246,0.2);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #b58df6;
+  box-shadow: 0 0 0 0.2rem rgba(181,141,246,0.25);
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(45deg, #fba8d4, #b58df6);
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+	box-shadow: 0 4px 20px rgba(212,146,246,0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover { background: #f3e5f5;
+  color: #8e24aa;
+  border-left: 4px solid #ba68c8;}
+
+#contact ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+#contact ul li i {
+ color: #ff66b2; /* màu hồng */
+  font-size: 1.2rem; /* to nhẹ */
+  margin-right: 8px;
+  transition: color 0.3s ease;
+}
